@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 import * as tf from "@tensorflow/tfjs";
 import * as handpose from "@tensorflow-models/handpose";
 import Webcam from "react-webcam";
-import { drawhand } from "./utilities";
+import { drawHand } from "./utilities";
 
 function App() {
   const webcamRef = useRef(null);
@@ -44,7 +44,7 @@ function App() {
 
         //draw mesh
         const ctx = canvasRef.current.getContext("2d");
-        drawhand(hand, ctx);
+        drawHand(hand, ctx);
       }
     };
   };
